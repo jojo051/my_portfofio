@@ -1,20 +1,29 @@
+require('dotenv').config()
+
 const express = require('express');
 const app = express();
-const port = 8000;
+const connection = require('./db.js');
+const cors = require('cors');
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
-app.use(express.urlencoded({
-  extended: true
-}));
+//creation routes
+const projets = require('./routes/projets.js');
+const etapes = require('./routes/etapes.js');
 
-app.get('/', (request, response) => {
-  response.send('Bienvenue sur Express');
-});
+app.use('/' , projets);
+app.use('/' , etapes);
 
-app.listen(port, (err) => {
+app.listen(process.env.PORT, (err) => {
   if (err) {
     throw new Error('Something bad happened...');
   }
-
-  console.log(`Server is listening on ${port}`);
+  console.log(`Server is listening on ${process.env.PORT}`);
 });
+
+app.get('/', (req, res) => {
+  res.send('Bienvenue sur Express');
+});
+module.exports= app
