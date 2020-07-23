@@ -32,7 +32,7 @@ const Contact = () => {
     <h1>Formulaire de contact</h1>
       <form onSubmit={submitForm}>
         <div>
-          <label htmlFor="sendname" className="">Votre nom </label>
+          <label htmlFor="sendname" className="label-send-name">Votre nom </label>
             <input
               type="text"
               id="sendname"
@@ -43,7 +43,7 @@ const Contact = () => {
               />
         </div> 
         <div>
-          <label htmlFor="mail" className="">Votre adresse mail </label>
+          <label htmlFor="mail" className="label-mail">Votre adresse mail </label>
             <input
               type="text"
               id="mail"
