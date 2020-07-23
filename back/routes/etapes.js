@@ -7,7 +7,7 @@ router.get('/etapes',(req, res) =>{
   res.send("helloroutesprojets")
 });
 
-router.get('etapes/',(req, res) =>{
+router.get('/etapes',(req, res) =>{
   connection.query('SELECT * from etape', (err, results) => {
     if (err) {
       res.sendStatus(500);
@@ -18,7 +18,7 @@ router.get('etapes/',(req, res) =>{
   });
 });
 
-router.get('etapes/:id', (req, res) => {
+router.get('/etapes/:id', (req, res) => {
   const id = req.params.id;
   connection.query('SELECT * from etape WHERE id = ?', [id], (err, results) => {
     if (err) {
@@ -32,7 +32,7 @@ router.get('etapes/:id', (req, res) => {
   });
 }); 
 
-router.post('etapes/', (req, res) => {
+router.post('/etapes/', (req, res) => {
   const formData = req.body;
   if (formData.name == null || formData.name === '') {
     res.sendStatus(422);
@@ -48,7 +48,7 @@ router.post('etapes/', (req, res) => {
   }
 });
 
-router.put('etapes/:id', (req, res) => {
+router.put('/etapes/:id', (req, res) => {
   const id = req.params.id;
   const formData = req.body;
   if (formData.name == null || formData.name === '') {
@@ -65,7 +65,7 @@ router.put('etapes/:id', (req, res) => {
   }
 });
 
-router.delete('etapes/:id', (req, res) => {
+router.delete('/etapes/:id', (req, res) => {
   const id = req.params.id;
   connection.query('DELETE FROM etape WHERE id = ?', id, err => {
     if (err) {
