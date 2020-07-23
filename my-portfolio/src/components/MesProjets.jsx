@@ -18,7 +18,7 @@ const MesProjets = () => {
   
   return (
     <div>
-      {projects.map((project)=>  <Link className="" to={`/projects/${project.id}`}><img src={project.image} alt={project.name} /></Link>  )}
+      {projects.map((project)=>  <Link className="button-link-project" to={`/projects/${project.id}`}><img src={project.image} alt={project.name} /></Link>  )}
     </div>
   );
 }

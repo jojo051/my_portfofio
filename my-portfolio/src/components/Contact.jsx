@@ -32,7 +32,7 @@ const Contact = () => {
   }
 
   return (
-    <section>
+    <section className="contact">
       <h1>Formulaire de contact</h1>
         <form onSubmit={submitForm}>
           <div>
@@ -58,7 +58,7 @@ const Contact = () => {
                 />
           </div>
           <div>
-            <label htmlfor="story">Message à envoyer: </label>
+            <label htmlfor="story" className="label-texarea">Message à envoyer: </label>
               <textarea 
                 id="textarea" 
                 name="textarea"
@@ -76,9 +76,9 @@ const Contact = () => {
               </button>
             </div>
         </form>
-      <Link className="BtnLink" to="/home">
+      <Link className="button-link-home" to="/home">
         retour
-        <img src="" alt="" className="" />
+        <img src="" alt="" className="button-home" />
       </Link>
     </section>
   );

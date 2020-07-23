@@ -6,9 +6,9 @@ import {
 const ContactMe = () => {
   return (
     <>
-    <Link className="BtnLink" to="/contact">
+    <Link className="button-link-contactme" to="/contact">
       Envoyer un Email
-      <img src="" alt="" className="BtnImg" />
+      <img src="" alt="" className="button-" />
     </Link>
     </>
   );

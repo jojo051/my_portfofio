@@ -41,9 +41,9 @@ const Projet = () => {
           </div>
           <div> 
             <button type="button" onClick={projectId -1} >projet précédent</button>
-            <Link className="BtnLink" to="/home">
-              home
-              <img src="" alt="" className="" />
+            <Link className="button-link-home" to="/home">
+              retour
+              <img src="" alt="" className="button-home" />
             </Link>
             <button type="button" onClick={projectId +1}>projet suivant</button>
           </div>
