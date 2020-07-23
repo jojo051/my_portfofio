@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Footer from './Footer';
 import ContactMe from './ContactMe';
+import './projet.css';
 
 const Projet = () => {
 
@@ -24,22 +25,23 @@ const Projet = () => {
   
 
   return (
-    <>
-      <section>
+      <section className="project">
         <img src={project.image} alt={project.name}/>
         <h1>{project.name}</h1>
-          <div>
-            <div>
-              {project.type}
+          <div className="project-presentation">
+            <div className="project-type">
+              <p>Type de projet</p>{project.type}
             </div>
-            <div>
+            <div className="project-texte">
+            <p>Description du projet</p>
             {project.texte_pitch}
             </div>
-            <div>
+            <div className="project-lien">
+            <p>Lien du projet</p>
             {project.lien}
             </div>
           </div>
-          <div> 
+          <div className="project-all-button"> 
             <button type="button" onClick={projectId -1} >projet précédent</button>
             <Link className="button-link-home" to="/home">
               retour
@@ -50,7 +52,6 @@ const Projet = () => {
         <div><ContactMe /></div>
         <div><Footer /></div>
       </section>
-    </>
   );
 }
 

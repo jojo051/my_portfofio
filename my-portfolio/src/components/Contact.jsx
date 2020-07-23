@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {
   Link,
 } from 'react-router-dom';
+import './contact.css';
 
 
 const Contact = () => {
@@ -34,9 +35,9 @@ const Contact = () => {
   return (
     <section className="contact">
       <h1>Formulaire de contact</h1>
-        <form onSubmit={submitForm}>
-          <div>
-            <label htmlFor="sendname" className="label-send-name">Votre nom:  </label>
+        <form onSubmit={submitForm} className="contact-form">
+          <div className="label-send-name">
+            <label htmlFor="sendname" >Votre nom:  </label>
               <input
                 type="text"
                 id="sendname"
@@ -46,8 +47,8 @@ const Contact = () => {
                 required
                 />
           </div> 
-          <div>
-            <label htmlFor="mail" className="label-mail">Votre adresse Email:  </label>
+          <div className="label-mail">
+            <label htmlFor="mail" >Votre adresse Email:  </label>
               <input
                 type="text"
                 id="mail"
@@ -57,8 +58,8 @@ const Contact = () => {
                 required
                 />
           </div>
-          <div>
-            <label htmlfor="story" className="label-texarea">Message à envoyer: </label>
+          <div className="label-texarea"> 
+            <label htmlfor="story" >Message à envoyer: </label>
               <textarea 
                 id="textarea" 
                 name="textarea"
@@ -70,8 +71,8 @@ const Contact = () => {
               >
               </textarea>
           </div>
-            <div>
-              <button type="submit" className="button-send-mail">
+            <div className="button-send-mail">
+              <button type="submit" >
                 Envoyer
               </button>
             </div>

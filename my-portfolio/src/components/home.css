@@ -1,0 +1,43 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background-color: #19ACD9;
+  color: aliceblue;
+}
+
+.home-projects {
+  display: flex;
+  flex-direction: column;
+}
+/*
+@media screen and (max-width: 768px) {
+  .home {
+    display: flex;
+    text-align: center;
+ }
+}
+@media screen and (min-width: 769px) and(max-width: 992px){
+  .home {
+    display: flex;
+    text-align: center;
+ }
+}
+@media screen and (min-width: 993px) and(max-width: 1200px){
+  .home {
+    display: flex;
+    text-align: center;
+ }
+}
+
+@media screen and (min-width: 1201px) {
+  .home {
+    display: flex;
+    text-align: center;
+ }
+}*/

@@ -1,0 +1,13 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.project-all-button {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
