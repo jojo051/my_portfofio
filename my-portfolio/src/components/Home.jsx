@@ -11,7 +11,6 @@ const Home = () => {
       <img src="" alt="" />
       <h2>Bon passons aux choses serieuses ...</h2>
       <p>Voici quelques uns des projets que je suis fier de vous presenter :</p>
-  
       </div>
     </>
   );
