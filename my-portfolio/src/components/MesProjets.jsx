@@ -7,18 +7,18 @@ import {
 
 const MesProjets = () => {
 
-  const [projets, setprojets] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   useEffect (() => {
-    Axios.get(`http://localhost:8000/projets`,)
+    Axios.get(`http://localhost:8000/projects`,)
       .then((response) => {
-        setprojets(response.data);
+        setProjects(response.data);
       });
   }, []);
   
   return (
     <div>
-      {projets !== null ? projets.map((projet)=> <Link className="" to="/projet"><img src={projet.image} alt={projet.name} className="" /></Link> ) : ""}
+      {projects.map((project)=>  <Link className="" to={`/projects/${project.id}`}><img src={project.image} alt={project.name} /></Link>  )}
     </div>
   );
 }

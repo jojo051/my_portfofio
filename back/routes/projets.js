@@ -4,7 +4,7 @@ const connection = require('../db.js');
 const router = express.Router();
 
 
-router.get('/projets',(req, res) =>{
+router.get('',(req, res) =>{
   connection.query('SELECT * from projet', (err, results) => {
     if (err) {
       res.sendStatus(500);
@@ -14,7 +14,7 @@ router.get('/projets',(req, res) =>{
   });
 });
 
-router.get('/projets/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   const id = req.params.id;
   connection.query('SELECT * from projet WHERE id = ?', [id], (err, results) => {
     if (err) {
@@ -28,7 +28,7 @@ router.get('/projets/:id', (req, res) => {
   });
 }); 
 
-router.post('/projets/', (req, res) => {
+router.post('/', (req, res) => {
   const formData = req.body;
   if (formData.name == null || formData.name === '') {
     res.sendStatus(422);
@@ -44,7 +44,7 @@ router.post('/projets/', (req, res) => {
   }
 });
 
-router.put('/projets/:id', (req, res) => {
+router.put('/:id', (req, res) => {
   const id = req.params.id;
   const formData = req.body;
   if (formData.name == null || formData.name === '') {
@@ -61,7 +61,7 @@ router.put('/projets/:id', (req, res) => {
   }
 });
 
-router.delete('/projets/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   const id = req.params.id;
   connection.query('DELETE FROM projet WHERE id = ?', id, err => {
     if (err) {

@@ -17,7 +17,7 @@ function App() {
         <Router>
           <Switch>
             <Route path="/contact" component={Contact} />
-            <Route path="/projet" component={Projet} />
+            <Route path="/projects/:projectId" component={Projet} />
             <Route path="/" component={Home} />
           </Switch>
         </Router>

@@ -13,7 +13,7 @@ app.use(cors());
 const projets = require('./routes/projets.js');
 const etapes = require('./routes/etapes.js');
 
-app.use('/' , projets);
+app.use('/projects' , projets);
 app.use('/' , etapes);
 
 app.listen(process.env.PORT, (err) => {
