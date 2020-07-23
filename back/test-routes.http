@@ -1,0 +1,7 @@
+### get projets
+GET http://localhost:8000/projets
+
+### get etapes
+GET http://localhost:8000/etapes
+
+

@@ -3,9 +3,6 @@ const connection = require('../db.js');
 
 const router = express.Router();
 
-router.get('/projets',(req, res) =>{
-  res.send("helloroutesprojet")
-});
 
 router.get('/projets',(req, res) =>{
   connection.query('SELECT * from projet', (err, results) => {

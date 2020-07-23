@@ -3,9 +3,6 @@ const connection = require('../db.js');
 
 const router = express.Router();
 
-router.get('/etapes',(req, res) =>{
-  res.send("helloroutesetapes")
-});
 
 router.get('/etapes',(req, res) =>{
   connection.query('SELECT * from etape', (err, results) => {
@@ -14,7 +11,6 @@ router.get('/etapes',(req, res) =>{
     } else {
       res.status(200).json(results);
     }
-
   });
 });
 
@@ -32,7 +28,7 @@ router.get('/etapes/:id', (req, res) => {
   });
 }); 
 
-router.post('/etapes/', (req, res) => {
+router.post('/etapes', (req, res) => {
   const formData = req.body;
   if (formData.name == null || formData.name === '') {
     res.sendStatus(422);
@@ -48,7 +44,7 @@ router.post('/etapes/', (req, res) => {
   }
 });
 
-router.put('/etapes/:id', (req, res) => {
+router.put('/:id', (req, res) => {
   const id = req.params.id;
   const formData = req.body;
   if (formData.name == null || formData.name === '') {
@@ -65,7 +61,7 @@ router.put('/etapes/:id', (req, res) => {
   }
 });
 
-router.delete('/etapes/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   const id = req.params.id;
   connection.query('DELETE FROM etape WHERE id = ?', id, err => {
     if (err) {
