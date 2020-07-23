@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
 
 const Projets = () => {
+
+  const [projets, setprojets] = useState([]);
+
+  useEffect (() => {
+    Axios.get(`http://localhost:8000/projets`,)
+      .then((response) => {
+        setprojets(response.data);
+      });
+  }, []);
+  
+
   return (
-    <>
-      hello function flecher
-    </>
+    <div>
+      hello
+      {/*{projets.map((projet)=> ) }*/}
+    </div>
   );
 }
 
