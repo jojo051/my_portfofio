@@ -1,4 +1,8 @@
 import React, {useState} from 'react';
+import {
+  Link,
+} from 'react-router-dom';
+
 
 const Contact = () => {
   const [sendName, setSendName] = useState('');
@@ -28,51 +32,55 @@ const Contact = () => {
   }
 
   return (
-    <>
-    <h1>Formulaire de contact</h1>
-      <form onSubmit={submitForm}>
-        <div>
-          <label htmlFor="sendname" className="label-send-name">Votre nom </label>
-            <input
-              type="text"
-              id="sendname"
-              name="sendname"
-              onChange={onChangeSendName}
-              value={sendName}
-              required
-              />
-        </div> 
-        <div>
-          <label htmlFor="mail" className="label-mail">Votre adresse mail </label>
-            <input
-              type="text"
-              id="mail"
-              name="mail"
-              onChange={onChangeMail}
-              value={mail}
-              required
-              />
-        </div>
-        <div>
-          <label for="story">Tell us your story:</label>
-            <textarea 
-              id="textarea" 
-              name="textarea"
-              rows="5" 
-              cols="33"
-              onChange={onChangeMessage}
-              required
-            >
-            Message à envoyer
-            </textarea>
-        </div>
+    <section>
+      <h1>Formulaire de contact</h1>
+        <form onSubmit={submitForm}>
           <div>
-            <button type="submit" className="button-send-mail">
-              Envoyer
-            </button>
+            <label htmlFor="sendname" className="label-send-name">Votre nom:  </label>
+              <input
+                type="text"
+                id="sendname"
+                name="sendname"
+                onChange={onChangeSendName}
+                value={sendName}
+                required
+                />
+          </div> 
+          <div>
+            <label htmlFor="mail" className="label-mail">Votre adresse Email:  </label>
+              <input
+                type="text"
+                id="mail"
+                name="mail"
+                onChange={onChangeMail}
+                value={mail}
+                required
+                />
           </div>
-      </form>
-    </>
+          <div>
+            <label htmlfor="story">Message à envoyer: </label>
+              <textarea 
+                id="textarea" 
+                name="textarea"
+                value={message}
+                rows="5" 
+                cols="33"
+                onChange={onChangeMessage}
+                required
+              >
+              </textarea>
+          </div>
+            <div>
+              <button type="submit" className="button-send-mail">
+                Envoyer
+              </button>
+            </div>
+        </form>
+      <Link className="BtnLink" to="/home">
+        retour
+        <img src="" alt="" className="" />
+      </Link>
+    </section>
   );
 }
 
