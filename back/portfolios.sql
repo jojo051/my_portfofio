@@ -32,7 +32,7 @@ CREATE TABLE `etape` (
 
 /*------ insertions--------*/
 
-INSERT INTO projet (`id`, `name`, `image`, `type`, `texte_pitch`, `lien`, `time` ) VALUES (1, 'Sacree Campus', 'img', 'Vitrine', 'lorem', 'https', '3 semaines'),(2, 'Cocktail paradise', 'img', 'Web app', 'lorem', 'https', '6 semaines'),(3, 'Tonton somelier', 'img', 'Web app', 'lorem', 'https', '8 semaines');
+INSERT INTO projet (`id`, `name`, `image`, `type`, `texte_pitch`, `lien`, `time` ) VALUES (1, 'Sacree Campus', 'https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60', 'Vitrine', 'lorem', 'https', '3 semaines'),(2, 'Cocktail paradise', 'https://images.unsplash.com/photo-1593643946890-b5b85ade6451?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60', 'Web app', 'lorem', 'https', '6 semaines'),(3, 'Tonton somelier', 'https://images.unsplash.com/photo-1595496115800-e35438b7d3b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60', 'Web app', 'lorem', 'https', '8 semaines');
 
 INSERT INTO etape (`id`, `name`, `explanatory_text`, `image`) VALUES (1, 'wireframe', 'lorem ipssoun',  'img'), (2, 'millieu','lorem ipssoun', 'img'), (3, 'fin','lorem ipssoun', 'img');
 
