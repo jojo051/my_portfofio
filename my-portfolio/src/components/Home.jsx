@@ -3,6 +3,7 @@ import Footer from './Footer';
 import {
   Link,
 } from 'react-router-dom';
+import ContactMe from './ContactMe';
 
 const Home = () => {
   return (
@@ -20,10 +21,7 @@ const Home = () => {
             <img src="" alt="" className="BtnImg" />
           </Link>
         <h2>Envie de me contacter ?</h2>
-          <Link className="BtnLink" to="/contact">
-            Envoyer un Email
-            <img src="" alt="" className="BtnImg" />
-          </Link>
+          <ContactMe />
       </div>
       <Footer />
     </>
