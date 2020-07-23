@@ -8,7 +8,7 @@ import {
 import './App.css';  
 import Home from './components/Home';
 import Contact from './components/Contact';
-import Projets from './components/Projets';
+import Projet from './components/Projet';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Router>
           <Switch>
             <Route path="/contact" component={Contact} />
-            <Route path="/projets" component={Projets} />
+            <Route path="/projet" component={Projet} />
             <Route path="/" component={Home} />
           </Switch>
         </Router>

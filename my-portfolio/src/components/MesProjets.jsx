@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import {
+  Link,
 
-const Projets = () => {
+} from 'react-router-dom';
+
+const MesProjets = () => {
 
   const [projets, setprojets] = useState([]);
 
@@ -12,13 +16,11 @@ const Projets = () => {
       });
   }, []);
   
-
   return (
     <div>
-      hello
-      {/*{projets.map((projet)=> ) }*/}
+      {projets !== null ? projets.map((projet)=> <Link className="" to="/projet"><img src={projet.image} alt={projet.name} className="" /></Link> ) : ""}
     </div>
   );
 }
 
-export default Projets;
+export default MesProjets;
