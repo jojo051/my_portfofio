@@ -4,7 +4,7 @@ const connection = require('../db.js');
 const router = express.Router();
 
 router.get('/etapes',(req, res) =>{
-  res.send("helloroutesprojets")
+  res.send("helloroutesetapes")
 });
 
 router.get('/etapes',(req, res) =>{
