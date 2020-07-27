@@ -42,7 +42,7 @@ const Projet = () => {
             </div>
           </div>
           <div className="project-all-button"> 
-            <button type="button" onClick={projectId -1} >projet précédent</button>
+            <button  type="button" onClick={projectId -1} >projet précédent</button>
             <Link className="button-link-home" to="/home">
               retour
               <img src="" alt="" className="button-home" />

@@ -59,7 +59,7 @@ const Contact = () => {
                 />
           </div>
           <div className="label-texarea"> 
-            <label htmlfor="story" >Message à envoyer: </label>
+            <label htmlFor="textarea" >Message à envoyer: </label>
               <textarea 
                 id="textarea" 
                 name="textarea"

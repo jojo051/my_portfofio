@@ -4,6 +4,7 @@ import ContactMe from './ContactMe';
 import MesProjets from './MesProjets';
 import zoomjojo from '../image/zoomjojo.png';
 import './home.css';
+
 const Home = () => {
   return (
       <section className="home"> 
@@ -13,8 +14,8 @@ const Home = () => {
             <h2> Je me présente</h2>
             <p> moi, c'est joel, ... lorem ipsum</p>
             <p> Je suis développeur Web junior à la recherche d'un stage, extrêmement motivé pour développer constamment mes compétences et évoluer professionnellement</p>
-          </div>
-            <img classname="home-img" src={zoomjojo} alt="my head" />
+          </div> 
+            <div classname="home-img"><img src={zoomjojo} alt="my head" /></div>
             <h1>Bon passons aux choses serieuses ...</h1>
             <p>Voici quelques uns des projets que je suis fier de vous presenter :</p>
           <div className="home-projects">
