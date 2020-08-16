@@ -8,13 +8,13 @@ const Home = () => {
   return (
       <section className="home"> 
         <div>
-          <h1 className="text-xl text-6xl text-white bg-blue-500 h-40 flex justify-center items-center" >Bonjour</h1>
+          <h1 className="text-6xl text-white bg-blue-500 h-40 flex justify-center items-center" >Bonjour</h1>
           <div className="flex flex-col">
             <h2 className="flex justify-center"> Je me présente</h2>
             <p className="flex justify-center"> moi, c'est joel, ... lorem ipsum</p>
             <p className="flex justify-center" > Je suis développeur Web junior à la recherche d'un stage, extrêmement motivé pour développer constamment mes compétences et évoluer professionnellement</p>
           </div> 
-            <div classname="home-img"><img src={zoomjojo} alt="my head" /></div>
+            <div className="flex justify-center"><img src={zoomjojo} alt="my head" /></div>
             <h1>Bon passons aux choses serieuses ...</h1>
             <p>Voici quelques uns des projets que je suis fier de vous presenter :</p>
           <div className="home-projects">

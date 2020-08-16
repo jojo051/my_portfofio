@@ -1,5 +1,5 @@
 @tailwind base;
 
-@tailwind composants  ;
+@tailwind components;
 
-@tailwind utilitaires ;
+@tailwind utilities;
