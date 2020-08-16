@@ -24,25 +24,25 @@ const Projet = () => {
   
 
   return (
-      <section className="project">
+      <section className="">
         <img src={project.image} alt={project.name}/>
         <h1>{project.name}</h1>
-          <div className="project-presentation">
-            <div className="project-type">
+          <div className="">
+            <div className="">
               <p>Type de projet</p>{project.type}
             </div>
-            <div className="project-texte">
+            <div className="">
             <p>Description du projet</p>
             {project.texte_pitch}
             </div>
-            <div className="project-lien">
+            <div className="">
             <p>Lien du projet</p>
             {project.lien}
             </div>
           </div>
-          <div className="flex justify-around"> 
+          <div className=""> 
             <button className=" bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" type="button" onClick={projectId -1} >projet précédent</button>
-            <Link className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" to="/home">
+            <Link  to="/home">
               retour
               <img  src="" alt="" className="button-home" />
             </Link>

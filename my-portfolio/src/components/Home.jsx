@@ -14,13 +14,13 @@ const Home = () => {
             <p className="flex justify-center"> moi, c'est joel, ... lorem ipsum</p>
             <p className="flex justify-center" > Je suis développeur Web junior à la recherche d'un stage, extrêmement motivé pour développer constamment mes compétences et évoluer professionnellement</p>
           </div> 
-            <div className="flex justify-center"><img src={zoomjojo} alt="my head" /></div>
-            <h1>Bon passons aux choses serieuses ...</h1>
+            <div className="flex justify-center"><img className="max-w-xl" src={zoomjojo} alt="my head" /></div>
+            <h1 className="text-6xl text-white bg-blue-500 h-40 flex justify-center items-center">Bon passons aux choses serieuses ...</h1>
             <p>Voici quelques uns des projets que je suis fier de vous presenter :</p>
-          <div className="home-projects">
+          <div className="flex justify-center">
             <MesProjets />
           </div>
-          <div className="home-contact">
+          <div className="">
             
               <ContactMe />
           </div>
