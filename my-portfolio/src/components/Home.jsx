@@ -3,17 +3,17 @@ import Footer from './Footer';
 import ContactMe from './ContactMe';
 import MesProjets from './MesProjets';
 import zoomjojo from '../image/zoomjojo.png';
-import './home.css';
+import '../styles/tailwind.css';
 
 const Home = () => {
   return (
       <section className="home"> 
         <div>
-          <h1>Bonjour</h1>
-          <div className="home-intro">
-            <h2> Je me présente</h2>
-            <p> moi, c'est joel, ... lorem ipsum</p>
-            <p> Je suis développeur Web junior à la recherche d'un stage, extrêmement motivé pour développer constamment mes compétences et évoluer professionnellement</p>
+          <h1 className="text-xl text-6xl text-white bg-blue-500 h-40 flex justify-center items-center" >Bonjour</h1>
+          <div className="flex flex-col">
+            <h2 className="flex justify-center"> Je me présente</h2>
+            <p className="flex justify-center"> moi, c'est joel, ... lorem ipsum</p>
+            <p className="flex justify-center" > Je suis développeur Web junior à la recherche d'un stage, extrêmement motivé pour développer constamment mes compétences et évoluer professionnellement</p>
           </div> 
             <div classname="home-img"><img src={zoomjojo} alt="my head" /></div>
             <h1>Bon passons aux choses serieuses ...</h1>

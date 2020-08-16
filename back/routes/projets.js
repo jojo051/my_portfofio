@@ -14,6 +14,7 @@ router.get('/',(req, res) =>{
   });
 });
 
+//fait
 router.get('/:id', (req, res) => {
   const id = req.params.id;
   connection.query('SELECT * from projet WHERE id = ?', [id], (err, results) => {
@@ -72,4 +73,65 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+//parse request
+/*
+const extractProject =(req, res, next) => {
+  next();
+};
+
+const extractProjectId = (req, res, next) => {
+  req.id = parseInt(req.params.id);
+  next();
+};
+
+// db query
+
+const findProject = (req, res, next) => {
+  db.query('SELECT * from projet', (err, results) => {
+    if (err) {
+      res.sendStatus(500);
+    } else {
+      req.data = results
+    }
+  });
+}
+
+const findProjectById = (req, res, next) => {
+  db.query('select * from users where project = ?', [Id], (err, results) => {
+      if (err) {
+          console.log(err);
+          res.sendStatus(500);
+      }
+      else {
+        req.data = results[0];
+        next();
+      }
+  })
+}
+
+// response construction
+
+/*const sendProjectIfExist = (req, res, next) => {
+  const { data } = req;
+
+  if (data == null) {
+    return res.sendStatus(404);
+  }
+  res.json(data);
+};
+
+const sendIfExists = (req, res) => {
+  const { data } = req;
+  if (data == null) {
+    return res.sendStatus(404);
+  }
+  res.json(data);
+};
+
+// using middleware
+app.get('/projets', extractProject, findProject, sendIfExists);
+app.get('/projets/:id', extractProjectId, findProjectById, sendIfExists);
+*/
+
+// ne pas oublier de passer conection en db
 module.exports = router;

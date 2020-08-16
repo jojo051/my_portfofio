@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 import Footer from './Footer';
 import ContactMe from './ContactMe';
-import './projet.css';
 
 const Projet = () => {
 
@@ -41,13 +40,13 @@ const Projet = () => {
             {project.lien}
             </div>
           </div>
-          <div className="project-all-button"> 
-            <button  type="button" onClick={projectId -1} >projet précédent</button>
-            <Link className="button-link-home" to="/home">
+          <div className="flex justify-around"> 
+            <button className=" bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" type="button" onClick={projectId -1} >projet précédent</button>
+            <Link className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" to="/home">
               retour
-              <img src="" alt="" className="button-home" />
+              <img  src="" alt="" className="button-home" />
             </Link>
-            <button type="button" onClick={projectId +1}>projet suivant</button>
+            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" type="button" onClick={projectId +1}>projet suivant</button>
           </div>
         <div><ContactMe /></div>
         <div><Footer /></div>
