@@ -10,10 +10,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //creation routes
-const projets = require('./routes/projets.js');
+const projects = require('./routes/projects.js');
 const etapes = require('./routes/etapes.js');
 
-app.use('/projects' , projets);
+app.use('/projects' , projects);
 app.use('/' , etapes);
 
 app.listen(process.env.PORT, (err) => {
