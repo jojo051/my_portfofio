@@ -3,7 +3,6 @@ import Footer from './Footer';
 import ContactMe from './ContactMe';
 import MesProjets from './MesProjets';
 import zoomjojo from '../image/zoomjojo.png';
-import '../styles/tailwind.css';
 
 const Home = () => {
   return (
