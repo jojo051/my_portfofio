@@ -3,7 +3,6 @@ import Footer from './Footer';
 import ContactMe from './ContactMe';
 import MesProjets from './MesProjets';
 import zoomjojo from '../image/zoomjojo.png';
-import './home.css';
 
 const Home = () => {
   return (

@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 import Footer from './Footer';
 import ContactMe from './ContactMe';
-import './projet.css';
 
 const Projet = () => {
 
